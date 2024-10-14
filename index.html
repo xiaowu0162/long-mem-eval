@@ -617,7 +617,7 @@
                     </p>
                 </center>
             <br>
-            <img src="src/figure_1.png" class="center">
+            <img src="figures/1_examples.png" class="center">
                 
         </div>
       </div>
@@ -628,64 +628,72 @@
 <section class="section">
     <div class="container is-max-desktop">
           <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
-        Synchronous Faithfulness Monitoring
+        Benchmark Construction
            </h2>
           <div class="content has-text-justified">
             <p>
-                Retrieval-augmented language models (RALMs) have shown strong performance and wide applicability in knowledge-intensive tasks. However, there are significant trustworthiness concerns as RALMs are prone to generating unfaithful outputs, including baseless information or contradictions with the retrieved context. 
+                xxx
             </p>
+            <img src="figures/2_data_pipeline.png" class="center" class="center", style="width: 100%; display: block; margin: auto;">
             <p>
-                Existing <em>post-hoc</em> approaches solve faithfulness issues via citation or revision, yet they are computationally costly. Meanwhile, existing <em>on-the-fly</em> interventions adopted by RALM systems are accuracy-driven, while their efficacy in detecting and correcting faithfulness errors is unknown. In this work, we ask: 
-                <center><b><em>Can we build efficient and accuracy faithfulness checkers for RALMs?</em></b></center>
+                xxx
             </p>
-            <p>We build <b><span class="dnerf">SynCheck</span></b>, an accurate checker for faithfulness errors that ensembles a range of efficiently measurable decoding dynamics. On a suite of six long-form retrieval-augmented generation datasets, <b><span class="dnerf">SynCheck</span></b> achieves 0.85 AUROC in detecting faithfulness errors across six long-form retrieval-augmented generation tasks, improving prior best method by 4%.</p>
-            <img src="src/table_1.png" class="center">
-            <p>
-                Although <b><span class="dnerf">SynCheck</span></b> requires training a lightweight aggregator, we find that the training processs does not need to be task-specific. 
-            </p>
-            <img src="src/figure_4.png" class="center", style="width: 60%; display: block; margin: auto;">
-            <p>
-                In addition, we can train <b><span class="dnerf">SynCheck</span></b> on a surrogate model, which can be leveraged to detect faitfhulness errors in other models' outputs.  
-            </p>
-            <img src="src/table_3.png" class="center", style="width: 60%; display: block; margin: auto;">
+            <img src="figures/3_basic_stats.png" class="center" class="center", style="width: 100%; display: block; margin: auto;">
           </div>
     </div>
-      <!--/ Abstract. -->
-    </section>
+</section>
 
-    <section class="section">
-        <div class="container is-max-desktop">
-              <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
-            Synchronous Faithfulness Intervention
-               </h2>
-              <div class="content has-text-justified">
-                <p>
-                    We further introduce <b><span class="dnerf">FOD</span></b>, a faithfulness-oriented decoding algorithm that levereages <b><span class="dnerf">SynCheck</span></b>'s on-the-fly feedback with a beam search algorithm.
-                </p>
-                <img src="src/algorithm_1.png" class="center" class="center", style="width: 60%; display: block; margin: auto;">
-                <p>
-                    On a suite of six datasets, we find <b><span class="dnerf">FOD</span></b> significantly improves over a range of baseline decoding strategies in improving the faithfulness of the output. 
-                </p>
-                <img src="src/table_2.png" class="center">
-                <p>
-                    In addition, compared to CAD, the prior state-of-the-art faithful decoding method, <b><span class="dnerf">FOD</span></b> achieves a better faithfulness at the first L sentences, with L=1, ..., 10.
-                </p>
-                <img src="src/figure_2.png" class="center">
-              </div>
-        </div>
-          <!--/ Abstract. -->
-        </section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+          <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
+        LongMemEval is Challenging
+           </h2>
+          <div class="content has-text-justified">
+            <p>
+                xxx
+            </p>
+            <img src="figures/4_longmemeval_challenging.png" class="center" class="center", style="width: 100%; display: block; margin: auto;">
+          </div>
+    </div>
+</section>
+
+
+<section class="section">
+    <div class="container is-max-desktop">
+          <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
+        A Unified View of Memory Systems
+           </h2>
+          <div class="content has-text-justified">
+            <p>
+                xxx
+            </p>
+            <img src="figures/5_memory_unified_view.png" class="center" class="center", style="width: 100%; display: block; margin: auto;">
+            <p>
+                xxx
+            </p>
+            <img src="figures/6_value_results.png" class="center" class="center", style="width: 100%; display: block; margin: auto;">
+            <p>
+                xxx
+            </p>
+            <img src="figures/7_key_results.png" class="center" class="center", style="width: 100%; display: block; margin: auto;">
+            <p>
+                xxx
+            </p>
+            <img src="figures/8_query_results.png" class="center" class="center", style="width: 100%; display: block; margin: auto;">
+            <p>
+                xxx
+            </p>
+            <img src="figures/9_reading_results.png" class="center" class="center", style="width: 100%; display: block; margin: auto;">
+          </div>
+    </div>
+</section>
 
 <section class="section" id="BibTeX">
     <div class="container is-max-desktop" content> 
       <h2 class="title">BibTeX</h2>
-      <pre><code>@misc{wu2024synchronous,
-      title={Synchronous Faithfulness Monitoring for Trustworthy Retrieval-Augmented Generation}, 
-      author={Di Wu and Jia-Chen Gu and Fan Yin and Nanyun Peng and Kai-Wei Chang},
-      year={2024},
-      eprint={2406.13692},
-      archivePrefix={arXiv},
-      primaryClass={id='cs.CL' full_name='Computation and Language' is_active=True alt_name='cmp-lg' in_archive='cs' is_general=False description='Covers natural language processing. Roughly includes material in ACM Subject Class I.2.7. Note that work on artificial languages (programming languages, logics, formal systems) that does not explicitly address natural-language issues broadly construed (natural-language processing, computational linguistics, speech, text retrieval, etc.) is not appropriate for this area.'}
+      <pre><code>@misc{wu2024longmemeval,
+      xxx
 }</code></pre>
 </div>
   </section>
